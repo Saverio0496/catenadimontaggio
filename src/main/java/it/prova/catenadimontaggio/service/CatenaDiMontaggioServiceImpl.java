@@ -26,6 +26,7 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 	@Override
 	public void avviaCatenaDiMontaggio(SlotCatenaDiMontaggio catenaDiMontaggioInput) {
 		System.out.println("Inizio catena di montaggio!");
+		System.out.println("--------------------------");
 		for (Automobile automobileItem : catenaDiMontaggioInput.getAutomobili()) {
 			System.out.println("Inizio montaggio dell'automobile :" + automobileItem);
 			telaioService.montaTelaio(automobileItem);
@@ -35,6 +36,7 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 			provaSuStradaService.effettuaProvaSuStrada(automobileItem);
 			System.out.println("Fine montaggio dell'automobile :" + automobileItem);
 		}
+		System.out.println("--------------------------");
 		System.out.println("Fine catena di montaggio!");
 	}
 
