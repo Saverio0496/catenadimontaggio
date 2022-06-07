@@ -60,4 +60,9 @@ public class Automobile {
 		this.slotCatenaDiMontaggio = slotCatenaDiMontaggio;
 	}
 
+	@Override
+	public String toString() {
+		return modello + " telaio: " + telaio;
+	}
+
 }
